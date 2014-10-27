@@ -12,7 +12,7 @@
 			"polymer_element": "page-profile"
 			},
 		{
-			"index": 5,
+			"index": 6,
 			"active": true,
 			"page_name":"Contact",
 			"data_trigger": "contact",
@@ -63,7 +63,7 @@
 			"polymer_element": "page-interests"
 			},
 		{
-			"index": 6,
+			"index": 7,
 			"active": false,
 			"page_name":"Free time",
 			"data_trigger": "freetime",
@@ -73,8 +73,8 @@
 			"polymer_element": "page-freetime"
 		},
 		{
-			"index": 7,
-			"active": false,
+			"index": 5,
+			"active": true,
 			"page_name": "Projects",
 			"data_trigger": "projects",
 			"icon": "ion-clipboard",
@@ -380,7 +380,7 @@
 					  "cycling/7.jpg",
 					  "cycling/8.jpg"
 			],
-			"description":"When I was five years old am learned to ride a bike. At begins I ride only in the neighborhood but over time we have expanded the reach of getting to conquer  mountains to see many beautiful areas on two wheels."
+			"description":"When I was five years old am learned to ride a bike. At the beginning I ride only in the neighborhood but over time we have expanded the reach to conquer mountains and I see many beautiful areas on two wheels at the present I ride approximately 3000 km per year"
 			
 		},{
 			"title": "Hiking",
@@ -392,7 +392,7 @@
 					  "hiking/6.jpg",
 					  "hiking/7.jpg",
 					  "hiking/8.jpg"],
-			"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			"description":"It's an extension of something we all do naturally and every day. I love fresh air, hearing the sounds of birds singing, waterfalls rushing, rivers running, wind blowing in the trees and stuff like that. I also like the way the trees smell. "
 		},{
 			"title":"Timelapse",
 			"images":["timelapse/1.jpg",
@@ -403,9 +403,9 @@
 					  "timelapse/6.jpg",
 					  "timelapse/7.jpg",
 					  "timelapse/8.jpg"],
-			"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			"description":"I love timelapse because it gives you the opportunity to play with time, you can make the time pass more quickly. When I do photos for timelapse spend some time for yourself where you can rinse your mind. I can watch the motion of the world in a way that is otherwise impossible."
 		},{
-			"title":"Old Cars",
+			"title":"Classic Cars",
 			"images": ["cars/1.jpg",
 					  "cars/2.jpg",
 					  "cars/3.jpg",
@@ -414,7 +414,7 @@
 					  "cars/6.jpg",
 					  "cars/7.jpg",
 					  "cars/8.jpg"],
-			"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			"description":"An classic car is like a novel, it has own story. With such a classic machine can keep a living piece of history and enjoy relaxing rides in unique atmosphere. I am convinced that in one day I'll be the proud owner of a classic car. "
 		},{
 			"title": "Music",
 			"images": ["music/1.jpg",
@@ -425,7 +425,22 @@
 					  "music/6.jpg",
 					  "music/7.jpg",
 					  "music/8.jpg"],
-			"description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			"description": "Music is everywhere, in your own headphones, in shops, in buses, In the morning after I wake up I turn on the music first and after i start usually stuffs.  Music is proved to raise dopamine levels in our body -that's the small (or big) chill you feel when you listen to your favourite songs."
+		}
+	],
+	"projects":[
+		{
+			"title": "Interactive resume",
+			"images":"",
+			"description":""
+		},{
+			"title": "edu.zcplus.ro",
+			"images":"",
+			"description":""
+		},{
+			"title": "USSD Client",
+			"images":"",
+			"description":""
 		}
 	],
 	"quotes":{
@@ -457,9 +472,9 @@
 			"text":"\"Is freedom anything else than the right to live as we wish? Nothing else.\"",
 			"author":"Epictetus"
 		},
-		"test":{
-			"text":"",
-			"author":""
-		}
+		"projects":{
+			"text":"\"It takes half your life before you discover life is a do-it-yourself project.\"",
+			"author":"Napoleon Hill "
+		} 
 	}
 }
