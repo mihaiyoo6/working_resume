@@ -1,22 +1,28 @@
+
+
 <?php
-if($_POST){
-	$data = json_decode($_POST['data']);
-	
-	$to = "mijeamihai@yahoo.com";
-	$subject = "[mijeamihai.com] - ". $data->email;
-	$message = " Name: " . $data->name . "\r\n Email: " . $data->email . "\r\n Message: " . $data->text;
-	 
-	 
-	$from = "mihai@mijeamihai.com";
-	$headers = "From:" . $from . "\r\n";
-	$headers .= "Content-type: text/plain; charset=UTF-8" . "\r\n"; 
-	 
-	if(@mail($to,$subject,$message,$headers)){
-		//var_dump(json_encode( array( 'succes' => true )));
-	 	print_r(json_encode( array( 'success' => true )));	  
-	}else{
-		//var_dump(json_decode($_POST['data']));
-	  	print_r(json_encode( array( 'success' => false )));
-	}
+$data = json_decode($_POST['data']);
+
+$servername = "localhost";
+$username = "root";
+$password = "1311a11";
+$dbname = "site";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "INSERT INTO contact_form ( sender_name, sender_email, message, send_date)
+VALUES ('".$data->name."', '".$data->email."','".$data->text."', Now())";
+
+if ($conn->query($sql) === TRUE) {
+    print_r(json_encode( array( 'success' => true )));
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
+$conn->close();
 ?>

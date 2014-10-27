@@ -5,28 +5,29 @@ var w = window.innerWidth;
 var h = window.innerHeight;
 $(document).on("ready", function() {
 
-	var jqxhr = $.getJSON( "json/mijeamihai.json", function( response ) {
-  		data = response;
-	})
-  	.done(function(response) {
       $('.jumbotron').css({ height: ($(window).height()) +'px' });
+      lazyLoad($('.jumbotron'));
+  var jqxhr = $.getJSON( "json/mijeamihai.json", function( response ) {
+      data = response;
+  })
+    .done(function(response) {
       importPolymerElements();
       makeMenu();
       fixMenu();
       makePages();
       applyClickEvent();
-
+      
      
-  	})
-  	.fail(function(response) {
-    	//error case
-  	})
-  	.always(function(response) {
+    })
+    .fail(function(response) {
+      //error case
+    })
+    .always(function(response) {
       //always
-  	});
-	jqxhr.complete(function(response) {
+    });
+  jqxhr.complete(function(response) {
     //complete
-	});
+  });
 
 });
 
@@ -41,9 +42,8 @@ function importPolymerElements(){
 
 function makeMenu(){
 
-	var menu = mySort(data.pages);
-	
-  lazyLoad($('.jumbotron'));
+  var menu = mySort(data.pages);
+  
 
 	for(var i in menu){
     if(menu[i].active){
