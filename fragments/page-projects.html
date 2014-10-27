@@ -2,55 +2,52 @@
 
 
 <polymer-element name="page-projects">
-<link href="common.css" rel="stylesheet"/>
-<template>
 
+<template>
+    <link href="common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <style>
 
-      core-animated-pages {
-        display: block;
-        
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-      }
 
-      section {
-        text-align: center;
-        
-      }
-
-      .square {
-        display: inline-block;
-        margin: 8px;
-        padding: 8px;
-        width: 200px;
-        height: 200px;
-        background-color: orange;
-        color: #fff;
-      }
     </style>
-    <div class="container">
-    	<div class="row">
-    <core-animated-pages transition="hero-transition">
-  <section layout horizontal>
-    <div id="div1" flex hero-id="shared" hero?="{{selected == 0}}"></div>
-    <div id="div2" flex hero-id="shared" hero?="{{selected == 1}}"></div>
-  </section>
-  <section>
-  <section layout horizontal>
-    <div id="div3" flex hero-id="shared" hero></div>
-  </section>
-  </section>
-</core-animated-pages>
-</div>
-</div>
-  </template>
- <script>
+    
+        <div id="projects-page" class="page_item">
+            <div class="container" >
+                <div class="row quote">
+                    <div class="col-md-3">
+                        <div class="title">PROJECTS</div>
+                    </div>
+                    <div class="col-md-9 element">
+                        <span>{{quote.text}}</span>
+                        <p>{{quote.author}}</p>
+                        <paper-ripple fit></paper-ripple>
+                        <paper-shadow animated='true' class="paper-shadow-bottom-z-5" z="1"></paper-shadow>  
+                    </div>
+                </div>
 
-    Polymer('page-projects', {
+            <template repeat="{{project in projects}}">
+                <div class="row element">
+                    <div class="col-md-8">
+                        <div class="section_title">
 
-    });
+                            {{project.title}}
+                        </div>
+                        <div class="">{{project.description}}</div>
+                    </div>
+                    <paper-shadow animated='true' class="paper-shadow-bottom-z-5" z="1"></paper-shadow> 
+                </div>
+            </template>
+            </div>
+            <paper-shadow animated='true' class="paper-shadow-bottom-z-5" z="1"></paper-shadow>
+        </div>    
+</template>
+<script>
+
+Polymer('page-projects', {
+    ready: function() {
+                this.projects = data.projects;
+                this.quote = data.quotes.projects;
+            },
+});
 </script>
 </polymer-element>
