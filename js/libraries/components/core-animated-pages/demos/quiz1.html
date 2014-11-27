@@ -150,30 +150,30 @@
 
       <section layout vertical>
 
-        <div class="tall-toolbar categories" slide-down>
+        <!--div class="tall-toolbar categories" slide-down>
           <span>Your name here</span>
-        </div>
+        </div-->
 
         <div class="tiles-container">
-          <div class="tile" style="background-color:#ccc;" layout vertical>
+          <!--div class="tile" style="background-color:#ccc;" layout vertical>
             <div class="tile-top" flex></div>
             <div class="tile-bottom" style="background-color:#aaa;">
               Leaderboard
             </div>
-          </div>
+          </div-->
           <div class="tile" hero-id="category-image" hero style="background-color:#ffff8d;" layout vertical on-tap="{{transition}}">
             <div class="tile-top" flex></div>
-            <div class="tile-bottom" hero-id="footer" hero style="background-color:#ffeb3b;">
+            <div class="tile-bottom" hero-id="footer" hero style="background-color:#ffeb3b;"> 
               General Knowledge
             </div>
           </div>
-          <div class="tile" style="background-color:#b9f6ca;" layout vertical>
+          <div class="tile" style="background-color:#b9f6ca;" hero-id="category-image1" layout vertical>
             <div class="tile-top" flex></div>
             <div class="tile-bottom" style="background-color:#0f9d58;">
               Category 2
             </div>
           </div>
-          <div class="tile" style="background-color:#ff8a80;" layout vertical>
+          <!--div class="tile" style="background-color:#ff8a80;" layout vertical>
             <div class="tile-top" flex></div>
             <div class="tile-bottom" style="background-color:#db4437;">
               Category 3
@@ -190,7 +190,7 @@
             <div class="tile-bottom" style="background-color:#7e57c2;">
               Category 5
             </div>
-          </div>
+          </div-->
         </div>
 
       </section>
@@ -202,6 +202,7 @@
         </div>
         <div class="bottom" hero-id="footer" hero cross-fade>
           <span cross-fade>General Knowledge</span>
+          <span on-tap="{{back}}">X</span>
         </div>
         <div class="fab fab-0" hero-id="fab" hero>
           <paper-fab icon="av:play-arrow" on-tap="{{transition}}" hero></paper-fab>
@@ -212,6 +213,7 @@
 
         <div class="tall-toolbar questions" hero-id="footer" hero>
           <span cross-fade>Question here</span>
+          
         </div>
         <div class="fab fab-1" hero-id="fab" hero>
           <paper-fab icon="av:play-arrow" on-tap="{{transition}}" hero></paper-fab>
@@ -252,6 +254,9 @@
         } else {
           this.page += 1;
         }
+      },
+      back: function() {
+        this.page = 0;
       }
     });
 

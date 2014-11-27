@@ -1,0 +1,40 @@
+<polymer-element name="tumblr-button"
+		 attributes="url title size color">
+
+	<template>
+		<a href="http://www.tumblr.com/share?v=3&u={{url}}&t={{title}}" target="_blank" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:{{width}}px; height:20px; background:url('http://platform.tumblr.com/v1/share_{{size}}{{color}}.png') top left no-repeat transparent;"></a>
+	</template>
+
+	<script>
+		Polymer("tumblr-button", {
+			url: 'goo.gl/NCRxm7',
+			title: 'tumblr-button',
+			size: 1,
+			color: 'blue',
+			width: 81,
+			created: function () {
+				if (this.color === 'gray') {
+					this.color = 'T';
+				} else {
+					this.color = '';
+				};
+
+				switch (parseInt(this.size)) {
+					case 1:
+						this.width = 81;
+						break;
+					case 2:
+						this.width = 62;
+						break;
+					case 3:
+						this.width = 129;
+						break;
+					case 4:
+						this.width = 20;
+						break;
+				}
+			}
+		});
+	</script>
+
+</polymer-element>
